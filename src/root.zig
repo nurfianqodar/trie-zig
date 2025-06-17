@@ -152,9 +152,22 @@ test "insert node" {
     try head.insert(user_router);
     try head.insert(user_router_v2);
     try head.insert(auth_router);
-    // try head.debug_print(0);
 
     if (head.lookup("api/v1/auth")) |data| {
         try std.testing.expectEqual("auth handlers", data);
+    } else {
+        try std.testing.expect(false);
+    }
+
+    if (head.lookup("api/v1/users")) |data| {
+        try std.testing.expectEqual("users handlers", data);
+    } else {
+        try std.testing.expect(false);
+    }
+
+    if (head.lookup("api/v2/users")) |data| {
+        try std.testing.expectEqual("users handlers v2", data);
+    } else {
+        try std.testing.expect(false);
     }
 }
