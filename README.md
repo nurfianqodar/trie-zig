@@ -100,7 +100,3 @@ Or integrate tests directly into your app using `std.testing`.
 ## 📄 License
 
 MIT — free to use, modify, and share.
-
----
-
-Ingin README ini juga dalam versi bahasa Indonesia? Saya bisa bantu terjemahkan juga.
